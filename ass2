@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main() {
+    int sum=0, r, n, m;
+    scanf("%d",&n);
+    while(n>0){
+        r=n%10;
+        sum+=r;
+        n/=10;
+    }
+    if(sum>9){
+        m=0;
+        while(sum>0){
+            r=sum%10;
+            m+=r;
+            sum/=10;
+        }
+        sum=m;
+    }
+    printf("%d",sum);
+    return 0;
+}
